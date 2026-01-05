@@ -8,7 +8,7 @@ const Homepage = () => {
   const {workouts,dispatch}=useWorkoutContext()
   useEffect(() => {
   const fetchWorkouts = async () => {
-    const response = await fetch('/api/workouts')
+    const response = await fetch('https://mern-workout-app-rwmt.onrender.com')
     const json=await response.json()
       if (response.ok){
         dispatch({type:'SET_WORKOUTS',payload:json})
