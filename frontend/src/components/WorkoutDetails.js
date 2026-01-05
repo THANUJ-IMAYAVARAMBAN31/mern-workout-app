@@ -4,9 +4,13 @@ import { useWorkoutContext } from '../useWorkoutContext';
 function WorkoutDetails({ workout }) {
   const {dispatch}=useWorkoutContext()
   const handleDelete=async()=>{
-    const response=await fetch('/api/workouts/'+workout._id,{
-      method:'DELETE'
-    })
+    const response = await fetch(
+  `https://mern-workout-app-rwmt.onrender.com/api/workouts/${workout._id}`,
+  {
+    method: 'DELETE'
+  }
+)
+
     const json=await response.json()
     if(response.ok){
       dispatch({type:'DELETE_WORKOUT',payload:json})
