@@ -16,7 +16,7 @@ function Workoutform() {
 
     const workout = { title, load, reps }
 
-    const response = await fetch('https://mern-workout-app-rwmt.onrender.com', {
+    const response = await fetch('https://mern-workout-app-rwmt.onrender/api/workouts.com', {
       method: 'POST',
       body: JSON.stringify(workout),
       headers: {
