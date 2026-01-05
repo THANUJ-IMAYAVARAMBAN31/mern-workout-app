@@ -4,7 +4,7 @@ import Workoutform from '../components/Workoutformy';
 import { useWorkoutContext } from '../useWorkoutContext';
 
 const Homepage = () => {
-  
+
   const {workouts,dispatch}=useWorkoutContext()
   useEffect(() => {
   const fetchWorkouts = async () => {
